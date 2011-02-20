@@ -22,9 +22,9 @@
 */
 #include <Python.h>
 
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h>
+#include <lua5.1/lua.h>
+#include <lua5.1/lauxlib.h>
+#include <lua5.1/lualib.h>
 
 #include "pythoninlua.h"
 #include "luainpython.h"
@@ -488,12 +488,12 @@ initlua(void)
 
 	if (!L) {
 		L = lua_open();
-		luaopen_base(L);
-		luaopen_table(L);
-		luaopen_io(L);
-		luaopen_string(L);
-		luaopen_debug(L);
-		luaopen_loadlib(L);
+
+		/* loading each lib separately has some deep conflict
+		 * with python's readline module so we obey the holy
+		 * docs by lua people and use the magic loader.
+		 */
+		luaL_openlibs(L);
 		luaopen_python(L);
 		lua_settop(L, 0);
 	}

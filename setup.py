@@ -9,7 +9,7 @@ if os.path.isfile("MANIFEST"):
 # You may have to change these
 PYLIBS = ["python"+get_python_version(), "pthread", "util"]
 PYLIBDIR = [get_python_lib(standard_lib=True)+"/config"]
-LUALIBS = ["lua", "lualib"]
+LUALIBS = ["lua5.1"]
 LUALIBDIR = []
 
 setup(name="lunatic-python",
