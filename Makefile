@@ -5,7 +5,7 @@
 DESTDIR=/
 PYTHON=python
 
-prefix=/usr
+prefix=/usr/local
 bindir=$(prefix)/bin
 
 all:
