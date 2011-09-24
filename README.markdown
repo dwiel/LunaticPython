@@ -10,4 +10,5 @@ This is an improved version of Lunatic Python 1.0, as written by
 Gustavo Niemeyer and available from http://labix.org/lunatic-python.
 
 Zach Dwiel has made some small changes to allow easy compilation on
-Ubuntu running lua5.1.  It has been testing on Ubuntu 9.04 and 10.04
+Ubuntu running lua5.1.  It has been testing on Ubuntu 9.04, 10.04 and
+11.04
